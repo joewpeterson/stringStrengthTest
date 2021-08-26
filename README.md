@@ -15,6 +15,12 @@ Write a C/C++ program which:
 	guarantee you can determine S. Try to optimize the time complexity
 
 /******************************************************************************/
+
+Note on running:
+	In a linux environment, compile by typing make.
+	run with command ./strSrength <int num of strings> <int num of weights>
+	num of strings and num of weights should be integers >= 0
+
 Note on my choise of language:
 	I choose C++ because most of my work is done in C and I have found 
 	prospective employers don't like that much. This gives me a small
