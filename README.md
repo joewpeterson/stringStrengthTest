@@ -73,11 +73,11 @@ Note on my table search routine:
 	MW(T-1, N-1)) + 1. One can construct subsequent layers of the table with 
 	a small number of sums rather than with a recursive call. 
 
-	One reason this is routine is not faster than the recursive routine
+	One reason this routine is not faster than the recursive routine
 	for smaller numbers of N is that I do one expensive check which saves
 	a lot of time if the user enters a bad M. With an infinite number of
 	tests we know to use binomial search. But this will only use log2(N)
 	strings. So M=log2(N) is effectively infinite strings. If the user
-	enters a very large number for M, there is no reason to contruct the
-	table to M, rather one constructs the table to log2(N).
+	enters a very large number for M, there is no reason to construct the
+	table to M, log2(N) is sufficient.
 
