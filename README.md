@@ -58,7 +58,7 @@ Note on my recursive algorithm:
 	
 Note on my table search routine:
 	After N = 1000, the recursive algorithm slows down. If you build a 
-	table of outputs for MW you see a patern:
+	table of outputs for MW + 1 you see a patern:
 
 	MW + 1
 	T\M	0	1	2	3	4	
