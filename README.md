@@ -69,8 +69,8 @@ Note on my table search routine:
 	3	1	4	7	8	8
 	4	1	5	11	15	16
 
-	MW + 1 is the sum of two smaller MWs (specifically, MW(T-1, N) and
-	MW(T-1, N-1)). One can construct subsequent layers of the table with 
+	MW + 1 is the sum of two smaller MWs (specifically, MW(T-1, N) + 1 and
+	MW(T-1, N-1)) + 1. One can construct subsequent layers of the table with 
 	a small number of sums rather than with a recursive call. 
 
 	One reason this is routine is not faster than the recursive routine
