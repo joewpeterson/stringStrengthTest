@@ -31,14 +31,14 @@ int main(int argc, char** argv)
 		//auto end = std::chrono::high_resolution_clock::now();
 		//auto duration = std::chrono::duration_cast<std::chrono::microseconds> (end - start);
 		//cout << duration.count() << endl;
-		//cout << "Max Story: " << tests << endl;
+		//cout << "Min test: " << tests << endl;
 	} else {
 		//auto start2 = std::chrono::high_resolution_clock::now();
 		tests = buildTable(maxWeight, sn);
 		//auto end2 = std::chrono::high_resolution_clock::now();
 		//auto duration2 = std::chrono::duration_cast<std::chrono::microseconds> (end2 - start2);
 		//cout << duration2.count() << endl;
-		//cout << "Max Story: " << tests << endl;
+		//cout << "Min test: " << tests << endl;
 	}
 	cout << "Min tests: " << tests << endl;
 
