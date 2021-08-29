@@ -51,7 +51,7 @@ int buildTable(int numf, int m)
 	//to only the size you need. 
 	int m_prime = log2(numf) + 1;
 	if (m_prime < m)
-		m = m_prime;
+		return m_prime;
 	
 	unique_ptr<int[]> currentRow = make_unique<int[]>(m + 1);
 	unique_ptr<int[]> previousRow = make_unique<int[]>(m + 1);
@@ -60,6 +60,8 @@ int buildTable(int numf, int m)
 	for (int i = 0; i <= m; i++)
 		previousRow[i] = 1;
 
+	currentRow[0] = 1;
+	
 	int tests = 0;
 	while(previousRow[m] <= numf){
 		for(int i = 0; i < m; i++)
