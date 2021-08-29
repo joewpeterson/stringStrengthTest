@@ -31,22 +31,28 @@ int main(int argc, char** argv)
 		//auto end = std::chrono::high_resolution_clock::now();
 		//auto duration = std::chrono::duration_cast<std::chrono::microseconds> (end - start);
 		//cout << duration.count() << endl;
-		//cout << "Max Story: " << tests << endl;
+		cout << "Min Tests: " << tests << endl;
 	} else {
 		//auto start2 = std::chrono::high_resolution_clock::now();
 		tests = buildTable(maxWeight, sn);
 		//auto end2 = std::chrono::high_resolution_clock::now();
 		//auto duration2 = std::chrono::duration_cast<std::chrono::microseconds> (end2 - start2);
 		//cout << duration2.count() << endl;
-		//cout << "Max Story: " << tests << endl;
+		cout << "Min Tests: " << tests << endl;
 	}
-	cout << "Min tests: " << tests << endl;
 
 	return 0;
 }
 
 int buildTable(int numf, int m)
 {
+
+	if (numf == 0 ||  m == 0)
+		return 0;
+
+	if (numf == 1 ||  m == 1)
+		return numf;
+
 	//In case user inputs a very large m, shrink it
 	//to only the size you need. 
 	int m_prime = log2(numf) + 1;
@@ -77,10 +83,10 @@ int buildTable(int numf, int m)
 
 int maxTestableWeight (int tn, int sn)
 {
-	if (tn == 0 || sn == 0)
-		return 0;
 
-	// A little time saving coarsening.
+	if (tn == 0 ||  sn == 0)
+		return tn;
+
 	if (tn == 1 ||  sn == 1)
 		return tn;
 
@@ -89,6 +95,9 @@ int maxTestableWeight (int tn, int sn)
 
 int minTests (int maxWeight, int sn)
 {
+	if (maxWeight == 0 || sn == 0)
+		return 0;
+
 	int tn = 0;
 	while(maxTestableWeight(tn, sn) < maxWeight)
 		tn++;
